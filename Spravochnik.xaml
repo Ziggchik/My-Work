@@ -1,0 +1,23 @@
+﻿<Window x:Class="WeaponStore.Spravochnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Справочники" Height="450" Width="800" Icon="iconka.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Worls'sEdge.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="btWeapon" Content="Справочник оружия" HorizontalAlignment="Left" Margin="93,60,0,0" VerticalAlignment="Top" Width="169" Height="72" Click="BtWeapon_Click"/>
+        <Button x:Name="btEmployee" Content="Справочник сотрудников" HorizontalAlignment="Left" Margin="483,166,0,0" VerticalAlignment="Top" Width="169" Height="74" Click="BtEmployee_Click"/>
+        <Button x:Name="btSupply" Content="Поставки" HorizontalAlignment="Left" Margin="483,60,0,0" VerticalAlignment="Top" Width="169" Height="75" Click="BtSupply_Click"/>
+        <Button x:Name="btModifications" Content="Справочник модификаций" HorizontalAlignment="Left" Margin="93,166,0,0" VerticalAlignment="Top" Width="169" Height="74" Click="BtModifications_Click"/>
+        <Button x:Name="btAmmo" Content="Справочник патронов" HorizontalAlignment="Left" Margin="93,278,0,0" VerticalAlignment="Top" Width="169" Height="69" Click="BtAmmo_Click"/>
+        <Button x:Name="btBack" Content="Назад" HorizontalAlignment="Left" Margin="483,278,0,0" VerticalAlignment="Top" Width="169" Height="69" Click="BtBack_Click"/>
+        <Button x:Name="btKlients" Content="Список клиентов" HorizontalAlignment="Left" Height="72" Margin="297,60,0,0" VerticalAlignment="Top" Width="161" Click="BtKlients_Click"/>
+        <Button x:Name="btBlockKlient" Content="Блокировка клиентов" HorizontalAlignment="Left" Margin="297,166,0,0" VerticalAlignment="Top" Width="161" Height="74" Click="BtBlockKlient_Click"/>
+        <Button x:Name="btNakladnaya" Content="Накладные" HorizontalAlignment="Left" Margin="297,278,0,0" VerticalAlignment="Top" Width="161" Height="69" Click="BtNakladnaya_Click"/>
+    </Grid>
+</Window>

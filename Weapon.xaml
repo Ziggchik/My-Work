@@ -1,0 +1,43 @@
+﻿<Window x:Class="WeaponStore.Weapon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Справочник оружия" Height="600" Width="1200" Icon="iconka.ico" Activated="Window_Activated" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Image gif:ImageBehavior.AnimatedSource="PathfinderDance.gif" Margin="0,0,20,0" />
+        <DataGrid SelectionMode="Single" x:Name="dgWeapon" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="263" Margin="47,29,0,0" VerticalAlignment="Top" Width="548" AutoGeneratingColumn="DgWeapon_AutoGeneratingColumn"/>
+        <Button x:Name="btInsert" Content="Добавить" HorizontalAlignment="Left" Margin="636,29,0,0" VerticalAlignment="Top" Width="130" Height="26" Click="BtInsert_Click"/>
+        <Button x:Name="btUpdate" Content="Изменить" HorizontalAlignment="Left" Margin="801,30,0,0" VerticalAlignment="Top" Width="130" Height="25" Click="BtUpdate_Click"/>
+        <Button x:Name="btDelete" Content="Удалить" HorizontalAlignment="Left" Margin="977,26,0,512" Width="130" Click="BtDelete_Click"/>
+        <TextBox x:Name="tbNameWeapon" HorizontalAlignment="Left" Height="23" Margin="47,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.WeaponInfo, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbAccuracy" HorizontalAlignment="Left" Height="23" Margin="208,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Accuracy, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbFireRate" HorizontalAlignment="Left" Height="23" Margin="371,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Fire_Rate, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbShellsInStore" HorizontalAlignment="Left" Height="23" Margin="47,382,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Shells_In_Store, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbCost" HorizontalAlignment="Left" Height="23" Margin="208,382,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Cost, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lbTypeWeapons" HorizontalAlignment="Left" Height="146" Margin="636,146,0,0" VerticalAlignment="Top" Width="471"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="23" Margin="371,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btSearch" Content="Поиск" HorizontalAlignment="Left" Margin="636,84,0,453" Width="130" Click="BtSearch_Click" Visibility="Hidden" />
+        <Button x:Name="btFilter" Content="Фильтрация" HorizontalAlignment="Left" Margin="801,80,0,453" Width="130" Click="BtFilter_Click" Visibility="Hidden" />
+        <Button x:Name="btInsertTypeWeapon" Content="Добавить тип" HorizontalAlignment="Left" Margin="636,326,0,0" VerticalAlignment="Top" Width="130" Height="34" Click="BtInsertTypeWeapon_Click" />
+        <Button x:Name="btDeleteTypeWeapon" Content="Удалить тип" HorizontalAlignment="Left" Margin="977,326,0,0" VerticalAlignment="Top" Width="130" Height="34" Click="BtDeleteTypeWeapon_Click"/>
+        <Button x:Name="btUpdateTypeWeapon" Content="Изменить тип" HorizontalAlignment="Left" Margin="801,328,0,0" VerticalAlignment="Top" Width="130" Height="32" Click="BtUpdateTypeWeapon_Click"/>
+        <Label Content="Название оружия" HorizontalAlignment="Left" Margin="47,295,0,0" VerticalAlignment="Top" Width="156" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Точность" HorizontalAlignment="Left" Margin="208,296,0,0" VerticalAlignment="Top" Width="146" Height="30" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Скорострельность" HorizontalAlignment="Left" Margin="371,295,0,0" VerticalAlignment="Top" Width="161" Height="31" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Патронов в магазине" HorizontalAlignment="Left" Margin="10,351,0,0" VerticalAlignment="Top" Width="194" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="208,351,0,0" VerticalAlignment="Top" Width="120" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="371,351,0,0" VerticalAlignment="Top" Width="120" Foreground ="Red" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox x:Name="tbAmmount_Weapon" HorizontalAlignment="Left" Height="23" Margin="47,444,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Ammount_Weapon, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Количество оружия на складе" HorizontalAlignment="Left" Margin="47,413,0,0" VerticalAlignment="Top" Width="250" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Название типа" HorizontalAlignment="Left" Margin="636,377,0,0" VerticalAlignment="Top" Width="138" Foreground ="Red" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="tbName_Type_Weapon" HorizontalAlignment="Left" Height="23" Margin="636,408,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.WeaponInfo, ElementName=dgWeapon}" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btClose" Content="Назад" HorizontalAlignment="Left" Margin="903,444,0,0" VerticalAlignment="Top" Width="204" Height="82" Click="BtClose_Click"/>
+        <CheckBox x:Name="chbFilter" Content="Отфильтровать" HorizontalAlignment="Left" Margin="977,80,0,0" VerticalAlignment="Top" Height="36" Width="145" Foreground ="Red" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
+        <CheckBox x:Name="chdgWeapon" Content="Открыть таблицы" HorizontalAlignment="Left" Margin="208,444,0,0" VerticalAlignment="Top" Height="46" Width="348" FontSize="36" FontWeight="Bold" Foreground="Red" Checked="ChdgWeapon_Checked" Unchecked="ChdgWeapon_Unchecked"/>
+        <Button Content="Не нажимать" HorizontalAlignment="Left" Margin="903,395,0,0" VerticalAlignment="Top" Width="204" Height="36" Click="Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B466DFDA-01D0-4DCA-A2FB-545042499A34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WeaponStore</RootNamespace>
+    <AssemblyName>WeaponStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif">
+      <HintPath>packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Document.NET">
+      <HintPath>packages\DocX.1.6.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET">
+      <HintPath>packages\DocX.1.6.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AccountWindow.xaml.cs">
+      <DependentUpon>AccountWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ammo.xaml.cs">
+      <DependentUpon>Ammo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssaultRifles.xaml.cs">
+      <DependentUpon>AssaultRifles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlockKlient.xaml.cs">
+      <DependentUpon>BlockKlient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration_class.cs" />
+    <Compile Include="Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Katalog.xaml.cs">
+      <DependentUpon>Katalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Katalog1.xaml.cs">
+      <DependentUpon>Katalog1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Katalog2.xaml.cs">
+      <DependentUpon>Katalog2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KlientInfo.xaml.cs">
+      <DependentUpon>KlientInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Klients.xaml.cs">
+      <DependentUpon>Klients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kontacts.xaml.cs">
+      <DependentUpon>Kontacts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Korzina.xaml.cs">
+      <DependentUpon>Korzina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LicenceSogl.xaml.cs">
+      <DependentUpon>LicenceSogl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LMG.xaml.cs">
+      <DependentUpon>LMG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modifications.xaml.cs">
+      <DependentUpon>Modifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nakladnaya.xaml.cs">
+      <DependentUpon>Nakladnaya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pistols.xaml.cs">
+      <DependentUpon>Pistols.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreyscourantModifications.xaml.cs">
+      <DependentUpon>PreyscourantModifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreyscourantWeapon.xaml.cs">
+      <DependentUpon>PreyscourantWeapon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreyscourantWeaponTest.xaml.cs">
+      <DependentUpon>PreyscourantWeaponTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="Shotguns.xaml.cs">
+      <DependentUpon>Shotguns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SMG.xaml.cs">
+      <DependentUpon>SMG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SniperRifles.xaml.cs">
+      <DependentUpon>SniperRifles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Spravochnik.xaml.cs">
+      <DependentUpon>Spravochnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Supply.xaml.cs">
+      <DependentUpon>Supply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableConnection\ConnectionAmmo.cs" />
+    <Compile Include="TableConnection\ConnectionAuthorization.cs" />
+    <Compile Include="TableConnection\ConnectionDogovor.cs" />
+    <Compile Include="TableConnection\ConnectionEmployee.cs" />
+    <Compile Include="TableConnection\ConnectionEmployee1.cs" />
+    <Compile Include="TableConnection\ConnectionKlient.cs" />
+    <Compile Include="TableConnection\ConnectionKlientDetail.cs" />
+    <Compile Include="TableConnection\ConnectionLicense.cs" />
+    <Compile Include="TableConnection\ConnectionModifications.cs" />
+    <Compile Include="TableConnection\ConnectionNakladnaya.cs" />
+    <Compile Include="TableConnection\ConnectionPosition.cs" />
+    <Compile Include="TableConnection\ConnectionRole.cs" />
+    <Compile Include="ConnectionSupplier.cs" />
+    <Compile Include="TableConnection\ConnectionSupply.cs" />
+    <Compile Include="TableConnection\ConnectionSupply1.cs" />
+    <Compile Include="TableConnection\ConnectionType_Weapon.cs" />
+    <Compile Include="TableConnection\ConnectionWeapon.cs" />
+    <Compile Include="TableConnection\ConnectionWeapon1.cs" />
+    <Compile Include="TableConnection\ConnectionWeaponDetail.cs" />
+    <Compile Include="Vakansii.xaml.cs">
+      <DependentUpon>Vakansii.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zastavka.xaml.cs">
+      <DependentUpon>Zastavka.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Weapon.xaml.cs">
+      <DependentUpon>Weapon.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ammo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AssaultRifles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlockKlient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Katalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Katalog1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Katalog2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KlientInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Klients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kontacts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Korzina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LicenceSogl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LMG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBProcedures.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Modifications.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Nakladnaya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pistols.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PreyscourantModifications.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PreyscourantWeapon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PreyscourantWeaponTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shotguns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SMG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SniperRifles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Spravochnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Supply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vakansii.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zastavka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Weapon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconka.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Authorization.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ammo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Modifications.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kontaks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AssaultRifles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Shotguns.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SMG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SniperRifles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pistols.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LMG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Registration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Регистрация1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Zastavka.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Worls%27sEdge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PathfinderDance.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Loba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wraith.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Authorization1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Revenantjpg.jpg" />
+    <Resource Include="Интерфейс магазина-вакансии.jpg" />
+    <Resource Include="Octaine.jpg" />
+    <Resource Include="Sans.jpg" />
+    <Resource Include="Black store.jpg" />
+    <Resource Include="Crypto.jpg" />
+    <Resource Include="bangalor.jpg" />
+    <Resource Include="Caustic.jpg" />
+    <Content Include="Fortnite Default Dance Bass Boosted.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

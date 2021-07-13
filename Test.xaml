@@ -1,0 +1,37 @@
+﻿<Window x:Class="WeaponStore.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Test" Height="800" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="769" VerticalAlignment="Top" Width="1182">
+            <TabItem x:Name="Car" Header="Корзина">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="47*"/>
+                        <ColumnDefinition Width="525*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid HorizontalAlignment="Left" Height="741" VerticalAlignment="Top" Width="1176" Grid.ColumnSpan="3"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Каталог">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Ammo.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Button x:Name="Ammo" Content="" HorizontalAlignment="Left" Height="40" Margin="546,213,0,0" VerticalAlignment="Top" Width="176" Background="#FF5DFF00" Foreground="#FF2BC31C" Opacity="0.4" />
+                    <Button x:Name="Weapon" Content="" HorizontalAlignment="Left" Height="40" Margin="263,213,0,0" VerticalAlignment="Top" Width="168" Background="White" Opacity="0" />
+                    <Button x:Name="Modifications" Content="" HorizontalAlignment="Left" Height="40" Margin="832,213,0,0" VerticalAlignment="Top" Width="275" Background="White" Opacity="0" />
+                    <Button x:Name="btShotgun_ammo" Content="" HorizontalAlignment="Left" Height="116" Margin="373,303,0,0" VerticalAlignment="Top" Width="119" Background="White" Opacity="0" Click="BtShotgun_ammo_Click"/>
+                    <Button x:Name="btHeavy_ammo" Content="" HorizontalAlignment="Left" Height="126" Margin="957,300,0,0" VerticalAlignment="Top" Width="126" Background="White" Opacity="0" Click="BtHeavy_ammo_Click"/>
+                    <Button x:Name="btLight_ammo" Content="" HorizontalAlignment="Left" Height="119" Margin="373,551,0,0" VerticalAlignment="Top" Width="119" Background="White" Opacity="0" Click="BtLight_ammo_Click"/>
+                    <Button x:Name="btSniper_ammo" Content="" HorizontalAlignment="Left" Height="120" Margin="963,542,0,0" VerticalAlignment="Top" Width="120" Background="White" Opacity="0" Click="BtSniper_ammo_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

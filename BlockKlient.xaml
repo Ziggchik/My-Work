@@ -1,0 +1,19 @@
+﻿<Window x:Class="WeaponStore.BlockKlient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Блокировка клиентов" Height="450" Width="800" Icon="iconka.ico" Activated="Window_Activated" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Sans.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Name="buttonClose" Content="Закрыть" HorizontalAlignment="Left" Height="46" Margin="651,345,0,0" VerticalAlignment="Top" Width="116" Click="ButtonClose_Click"/>
+        <Button x:Name="buttonBlock"  Content="Заблокировать" HorizontalAlignment="Left" Height="46" Margin="651,185,0,0" VerticalAlignment="Top" Width="116" Click="ButtonBlock_Click"/>
+        <DataGrid SelectionMode="Single" Name="dataGridClients" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="362" Margin="47,29,0,0" VerticalAlignment="Top" Width="548"/>
+        <Button x:Name="buttonUnBlock" Content="Разблокировать" HorizontalAlignment="Left" Height="46" Margin="651,257,0,0" VerticalAlignment="Top" Width="116" Click="ButtonUnBlock_Click"/>
+        <CheckBox x:Name="chbdgBlockklient" Content="Открыть таблицу" HorizontalAlignment="Left" Margin="636,308,0,0" VerticalAlignment="Top" Height="38" Width="146" FontWeight="Bold" FontSize="14" Foreground="AntiqueWhite" Checked="ChbdgBlockklient_Checked" Unchecked="ChbdgBlockklient_Unchecked"/>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="WeaponStore.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800" Icon="iconka.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Authorization1.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Регистрация" HorizontalAlignment="Left" Height="48" Margin="112,311,0,0" VerticalAlignment="Top" Width="205" FontSize="25" Click="Button_Click_2"/>
+        <Button Content="Вход" HorizontalAlignment="Left" Height="45" Margin="112,261,0,0" VerticalAlignment="Top" Width="205" FontSize="25" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Text ="" Margin="112,150,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Name="txtBoxLog" FontSize="18">
+            <TextBox.ToolTip>
+                Введите логин
+            </TextBox.ToolTip>
+        </TextBox>
+        <PasswordBox Height="32"  Margin="112,216,465,0" 
+         Name="txtBoxPas" VerticalAlignment="Top" 
+         Background="White" Foreground="DarkBlue" FontSize="18" PasswordChar="*">
+            <PasswordBox.ToolTip>
+                Введите пароль
+            </PasswordBox.ToolTip>
+        </PasswordBox>
+    </Grid>
+</Window>

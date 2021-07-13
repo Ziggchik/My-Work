@@ -1,0 +1,18 @@
+﻿<Window x:Class="WeaponStore.PreyscourantWeapon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Выбор товара" Height="450" Width="800" Activated="Window_Activated" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="415*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid SelectionMode="Single" Name="dgWeapon" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="263" Margin="47,29,0,0" VerticalAlignment="Top" Width="548" Grid.ColumnSpan="2"/>
+        <Button Content="Добавить в корзину" HorizontalAlignment="Left" Margin="47,322,0,0" VerticalAlignment="Top" Width="214" Height="62" Click="Button_Click"/>
+    </Grid>
+</Window>

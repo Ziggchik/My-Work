@@ -1,0 +1,56 @@
+﻿<Window x:Class="WeaponStore.Employee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Справочник сотрудников" Height="800" Width="1200" Icon="iconka.ico" Activated="Window_Activated" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Caustic.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DataGrid SelectionMode="Single" x:Name="dgEmployee" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="263" Margin="47,29,0,0" VerticalAlignment="Top" Width="548"/>
+        <Button x:Name="btInsert" Content="Добавить" HorizontalAlignment="Left" Margin="636,29,0,0" VerticalAlignment="Top" Width="130" Height="26" Click="BtInsert_Click" />
+        <Button x:Name="btUpdate" Content="Изменить" HorizontalAlignment="Left" Margin="636,60,0,0" VerticalAlignment="Top" Width="130" Height="25" Click="BtUpdate_Click"/>
+        <Button x:Name="btDelete" Content="Удалить" HorizontalAlignment="Left" Margin="636,90,0,626" Width="130" Click="BtDelete_Click" />
+        <TextBox x:Name="tbFirstName" HorizontalAlignment="Left" Height="23" Margin="47,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Фамилия, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="208,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Имя, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbMiddleName" HorizontalAlignment="Left" Height="23" Margin="371,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Отчество, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbJobExpirience" HorizontalAlignment="Left" Height="23" Margin="47,382,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Опыт_работы, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbEmploymentData" HorizontalAlignment="Left" Height="23" Margin="208,382,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Дата_трудоустройства, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lbPosition" HorizontalAlignment="Left" Height="130" Margin="636,162,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="23" Margin="371,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btSearch" Content="Поиск" HorizontalAlignment="Left" Margin="796,29,0,684" Width="130" Click="BtSearch_Click" />
+        <Button x:Name="btFilter" Content="Фильтрация" HorizontalAlignment="Left" Margin="796,90,0,626" Width="130" Click="BtFilter_Click" />
+        <Button x:Name="btInsertPosition" Content="Добавить должность" HorizontalAlignment="Left" Margin="636,304,0,0" VerticalAlignment="Top" Width="130" Height="34" Click="BtInsertPosition_Click"/>
+        <Button x:Name="btDeletePosition" Content="Удалить должность" HorizontalAlignment="Left" Margin="636,382,0,0" VerticalAlignment="Top" Width="130" Height="34" Click="BtDeletePosition_Click"/>
+        <Button x:Name="btUpdatePosition" Content="Изменить должность" HorizontalAlignment="Left" Margin="636,345,0,0" VerticalAlignment="Top" Width="130" Height="32" Click="BtUpdatePosition_Click"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="47,300,0,0" VerticalAlignment="Top" Width="120" Foreground="AntiqueWhite"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="208,300,0,0" VerticalAlignment="Top" Width="120" Height="26" Foreground="AntiqueWhite"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="371,300,0,0" VerticalAlignment="Top" Width="120" Height="26" Foreground="AntiqueWhite"/>
+        <Label Content="Опыт работы" HorizontalAlignment="Left" Margin="47,356,0,0" VerticalAlignment="Top" Width="138" Foreground="AntiqueWhite"/>
+        <Label Content="Дата трудоустройства" HorizontalAlignment="Left" Margin="208,356,0,0" VerticalAlignment="Top" Width="135" Foreground="AntiqueWhite"/>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="371,359,0,0" VerticalAlignment="Top" Width="120" Foreground="AntiqueWhite"/>
+        <Label Content="Название должности" HorizontalAlignment="Left" Margin="511,300,0,0" VerticalAlignment="Top" Width="135" Height="26" Foreground="AntiqueWhite"/>
+        <TextBox x:Name="tbName_Position" HorizontalAlignment="Left" Height="23" Margin="511,326,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Название_должности, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Оплата" HorizontalAlignment="Left" Margin="511,356,0,0" VerticalAlignment="Top" Width="120" Height="26" Foreground="AntiqueWhite"/>
+        <TextBox x:Name="tbSalary" HorizontalAlignment="Left" Height="23" Margin="511,382,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Оплата, ElementName=dgEmployee}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="37" Text ="" Margin="172,569,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" x:Name="txtBoxPassword2" FontSize="18">
+            <TextBox.ToolTip>Нужно повторить пароль</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="37" Text ="" Margin="172,504,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" x:Name="txtBoxPassword" FontSize="18">
+            <TextBox.ToolTip>Введите пароль Пример: Kovalenko1</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="37" Text ="" Margin="172,448,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="244" x:Name="txtBoxLogin" FontSize="18">
+            <TextBox.ToolTip>Нужно ввести логин Пример: Kovalenko@mail.ru</TextBox.ToolTip>
+        </TextBox>
+        <Label x:Name="labelPass2" Content="Повтор пароля" HorizontalAlignment="Left" Height="36" Margin="55,570,0,0" VerticalAlignment="Top" Width="112" FontFamily="{DynamicResource {x:Static SystemFonts.StatusFontFamilyKey}}" Foreground="AntiqueWhite"/>
+        <Label x:Name="labelPass" Content="Пароль" HorizontalAlignment="Left" Height="36" Margin="47,504,0,0" VerticalAlignment="Top" Width="66" FontFamily="{DynamicResource {x:Static SystemFonts.StatusFontFamilyKey}}" Foreground="AntiqueWhite"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Height="36" Margin="47,448,0,0" VerticalAlignment="Top" Width="66" x:Name="labelLogin" FontFamily="{DynamicResource {x:Static SystemFonts.StatusFontFamilyKey}}" Foreground="AntiqueWhite"/>
+        <Button x:Name="btBack" Content="Назад" HorizontalAlignment="Left" Margin="958,29,0,0" VerticalAlignment="Top" Width="130" Height="56" Click="BtBack_Click"/>
+        <CheckBox  x:Name="chbFilter" Content="Отфильтровать" HorizontalAlignment="Left" Margin="796,148,0,0" VerticalAlignment="Top" Height="23" Width="130" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="14"/>
+        <CheckBox x:Name="chbdgNakladnaya" Content="Открыть таблицу" HorizontalAlignment="Left" Margin="796,176,0,0" VerticalAlignment="Top" Height="38" Width="146" FontWeight="Bold" FontSize="14" Foreground="AntiqueWhite" Checked="ChbdgNakladnaya_Checked" Unchecked="ChbdgNakladnaya_Unchecked"/>
+
+    </Grid>
+</Window>

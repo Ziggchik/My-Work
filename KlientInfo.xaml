@@ -1,0 +1,15 @@
+﻿<Window x:Class="WeaponStore.KlientInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Информация для клиентов" Height="450" Width="800" Icon="iconka.ico" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Black store.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="btBack" Content="Закрыть" HorizontalAlignment="Left" Margin="36,243,0,0" VerticalAlignment="Top" Width="112" Height="45" Click="BtBack_Click"/>
+    </Grid>
+</Window>

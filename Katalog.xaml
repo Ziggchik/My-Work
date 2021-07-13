@@ -1,0 +1,34 @@
+﻿<Window x:Class="WeaponStore.Katalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStore"
+        mc:Ignorable="d"
+        Title="Каталог" Height="800" Width="1200" Icon="iconka.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="569*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Weapon.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="Штурмовые винтовки" HorizontalAlignment="Left" Margin="50,445,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" Grid.ColumnSpan="2"/>
+        <Label Content="Пистолеты-пулемёты" HorizontalAlignment="Left" Margin="404,445,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" Grid.Column="1"/>
+        <Label Content="Ручные пулемёты" HorizontalAlignment="Left" Margin="770,445,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" RenderTransformOrigin="0.698,0.34" Grid.Column="1"/>
+        <Label Content="Снайперские винтовки" HorizontalAlignment="Left" Margin="42,551,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" Grid.Column="1"/>
+        <Label Content="Дробовики" HorizontalAlignment="Left" Margin="476,551,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" Grid.Column="1"/>
+        <Label Content="Пистолеты" HorizontalAlignment="Left" Margin="870,551,0,0" VerticalAlignment="Top" FontSize="22" Background="#00000000" Foreground="White" FontWeight="Bold" Height="47" Width="258" Grid.Column="1"/>
+        <Button x:Name="Weapon" Content="" HorizontalAlignment="Left" Height="58" Margin="215,197,0,0" VerticalAlignment="Top" Width="159" Background="#FF5DFF00" Foreground="#FF2BC31C" Opacity="0.4" Click="Weapon_Click" Grid.Column="1"/>
+        <Button x:Name="Ammo" Content="" HorizontalAlignment="Left" Height="40" Margin="494,215,0,0" VerticalAlignment="Top" Width="168" Background="White" Opacity="0" Click="Ammo_Click" Grid.Column="1" />
+        <Button x:Name="Modifications" Content="" HorizontalAlignment="Left" Height="40" Margin="770,215,0,0" VerticalAlignment="Top" Width="290" Background="White" Opacity="0" Click="Modifications_Click" Grid.Column="1" />
+        <Button x:Name="btAssault_Rifles" Content="" HorizontalAlignment="Left" Height="215" Margin="50,277,0,0" VerticalAlignment="Top" Width="378" Background="White" Opacity="0" Click="BtAssault_Rifles_Click" Grid.ColumnSpan="2" />
+        <Button x:Name="btSubMuchineGuns" Content="" HorizontalAlignment="Left" Height="215" Margin="379,277,0,0" VerticalAlignment="Top" Width="355" Background="White" Opacity="0" Click="BtSubMuchineGuns_Click" Grid.Column="1" />
+        <Button x:Name="MuchineGuns" Content="" HorizontalAlignment="Left" Height="215" Margin="770,277,0,0" VerticalAlignment="Top" Width="340" Background="White" Opacity="0" Click="MuchineGuns_Click" Grid.Column="1" />
+        <Button x:Name="SniperRifles" Content="" HorizontalAlignment="Left" Height="197" Margin="50,533,0,0" VerticalAlignment="Top" Width="304" Background="White" Opacity="0" Click="SniperRifles_Click" Grid.ColumnSpan="2" />
+        <Button x:Name="Shotguns" Content="" HorizontalAlignment="Left" Height="197" Margin="341,533,0,0" VerticalAlignment="Top" Width="367" Background="White" Opacity="0" Click="Shotguns_Click" Grid.Column="1" />
+        <Button x:Name="Pistols" Content="" HorizontalAlignment="Left" Height="197" Margin="739,533,0,0" VerticalAlignment="Top" Width="351" Background="White" Opacity="0" Click="Pistols_Click" Grid.Column="1" />
+        <Button x:Name="btBack" Content="Назад" Grid.Column="1" HorizontalAlignment="Left" Margin="949,129,0,0" VerticalAlignment="Top" Width="161" Height="60" Click="BtBack_Click"/>
+    </Grid>
+</Window>
